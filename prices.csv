@@ -1,19 +1,25 @@
-dish,app,menu_price,delivery_fee,min_order,percent_off
-Paneer Biryani,Swiggy,450,30,400,15
-Paneer Biryani,Zomato,450,25,300,10
-Veg Burger,Swiggy,180,20,200,20
-Veg Burger,Zomato,190,15,150,10
-Biryani,Toing,480,30,400,20
-Biryani,Eatclub,500,25,200,15
-Kebab,Toing,400,24,300,10
-Kebab,Eatclub,399,30,349,30
-Masala Dosa,Swiggy,120,20,100,10
-Masala Dosa,Zomato,130,25,100,15
-Chicken Fried Rice,Swiggy,180,30,150,20
-Chicken Fried Rice,Zomato,190,20,150,10
-Paneer Butter Masala,Swiggy,220,25,200,15
-Paneer Butter Masala,Zomato,210,30,200,20
-Veg Noodles,Swiggy,150,20,100,10
-Veg Noodles,Zomato,160,25,100,15
-Chicken Burger,Swiggy,160,20,150,10
-Chicken Burger,Zomato,170,25,150,20
+dish,app,menu_price,delivery_fee,min_order,percent_off,cap
+Paneer Biryani,Swiggy,450,30,400,15,100
+Paneer Biryani,Zomato,450,25,300,10,40
+Veg Burger,Swiggy,180,20,200,20,50
+Veg Burger,Zomato,190,15,150,10,30
+Chicken Biryani,Swiggy,320,30,300,20,80
+Chicken Biryani,Zomato,330,25,250,15,60
+Margherita Pizza,Swiggy,280,35,249,25,100
+Margherita Pizza,Zomato,290,30,299,20,75
+Masala Dosa,Swiggy,120,20,150,10,30
+Masala Dosa,Zomato,110,25,100,15,40
+Butter Chicken,Swiggy,380,30,350,20,90
+Butter Chicken,Zomato,370,35,300,15,70
+Veg Fried Rice,Swiggy,200,25,199,15,50
+Veg Fried Rice,Zomato,210,20,250,10,30
+Chicken Burger,Swiggy,220,22,199,20,60
+Chicken Burger,Zomato,230,18,249,15,50
+Paneer Tikka,Swiggy,300,28,299,15,60
+Paneer Tikka,Zomato,290,30,250,10,40
+Chole Bhature,Swiggy,160,20,199,10,25
+Chole Bhature,Zomato,150,24,149,20,45
+Veg Thali,Swiggy,250,30,249,20,70
+Veg Thali,Zomato,260,25,300,25,100
+Chocolate Brownie,Swiggy,140,18,149,15,30
+Chocolate Brownie,Zomato,150,15,199,10,25

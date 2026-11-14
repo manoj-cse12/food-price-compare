@@ -1,12 +1,16 @@
 import csv
 import streamlit as st
 
-def final_price(menu_price, delivery_fee, min_order, percent_off):
+PLATFORM_FEES = {"Swiggy": 6, "Zomato": 8}
+
+
+def final_price(menu_price, delivery_fee, min_order, percent_off, cap, platform_fee):
     if menu_price >= min_order:
-        discount = menu_price * percent_off / 100
+        discount = min(menu_price * percent_off / 100, cap)
     else:
         discount = 0
-    return menu_price - discount + delivery_fee
+    return menu_price - discount + delivery_fee + platform_fee
+
 
 st.title("Food Price Comparison")
 
@@ -27,6 +31,8 @@ for row in rows:
             int(row["delivery_fee"]),
             int(row["min_order"]),
             int(row["percent_off"]),
+            int(row["cap"]),
+            PLATFORM_FEES.get(row["app"], 0),
         )
         results.append({"App": row["app"], "Final price": price})
         if cheapest_price is None or price < cheapest_price:
@@ -34,6 +40,7 @@ for row in rows:
             cheapest_app = row["app"]
 
 for item in results:
-    st.write(item["App"], ": ₹", item["Final price"])
+    st.write(f"{item['App']}: ₹{item['Final price']:.2f}")
 
-st.success("Cheapest: " + cheapest_app + " at ₹" + str(cheapest_price))
+st.success(f"Cheapest: {cheapest_app} at ₹{cheapest_price:.2f}")
+
